@@ -1,0 +1,2 @@
+rootref = pwd();
+addpath(rootref);
