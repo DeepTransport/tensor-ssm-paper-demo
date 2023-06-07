@@ -13,6 +13,9 @@ model.steps = 20;   % the steps for sequential inference
                    % for cts model, the total time is model.dt * steps 
 model.sam_size = 1e4; % the sample size to estimate precondition in filter
 
+file = 'test';
+model.file = file;
+
 
 
 if strcmp(model.pre, 'DIRT') || strcmp(model.pre, 'SSM')
@@ -33,10 +36,6 @@ elseif strcmp(model.pre, 'NL')
 end
 
 
-file = 'test';
-model.file = file;
-
-
 %% complete model
 
 addpath([rootref '/' model.name])
@@ -50,6 +49,7 @@ rng('shuffle')
 % model.C = C;
 % model.X = X(:, 1:model.steps+1);
 % model.Y = Y(:, 1:model.steps);
+
 %% ftt
 poly1 = Legendre(40, [-4, 4]);
 poly2 = Lagrange1(50, [-4, 4]);
