@@ -4,10 +4,6 @@
 % clf
 file = 'test';
 root = pwd;
-
-% save([root '\paperresults\' file '\' file], 'rootref', '-append')
-% save([root '\paperresults\' file '\' file], 'root', '-append')
-% load([root '\paperresults\' file '\' file])
 load([root '/data/' file '.mat'])
 
 timeindex = 1:model.steps;  % the time index to compute ESS
