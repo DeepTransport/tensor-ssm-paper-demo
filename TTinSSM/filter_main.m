@@ -38,7 +38,7 @@ model.file = file;
 
 
 %% complete model
-mkdir('data', file)
+
 addpath([rootref '/' model.name])
 
 rng(1)
