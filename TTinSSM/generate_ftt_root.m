@@ -20,7 +20,7 @@ switch model.trans
             if k == 1
                 ftt = FTT(fun, model.d, model.poly, model.opt);
             else 
-                ftt = FTT(fun, model.d, ftt);
+                ftt = SIRT(fun, model.d, ftt);
             end
 
              

@@ -44,7 +44,6 @@ switch model.trans
             sam_old = L1 * powinvlag(sam_old,model.pow) + mu1; % generate samples     
             fun = @(x) eval_pdf(ftt, powcdflag(L1\(x-mu1),model.pow)).*powpdflag(L1\(x-mu1),model.pow); % input is inf     
             model.time_filter(k) = toc;  
-            display(model.time_filter)
         end
         
     case 'truncated'
