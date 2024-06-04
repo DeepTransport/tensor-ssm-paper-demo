@@ -7,11 +7,14 @@ In DIRT method, model.c controls the power of the tempering measure
 %}
 
 % Model parameters
-model.name = 'kalman';   % model names: 'kalman','pp','lorenz96', 'sv'
-model.pre = 'NL'; % three different options: NL, DIRT and SSM
+model.name = 'kalman';   % model names: 'kalman','pp', 'sv'
+model.pre = 'NL'; % three different options: NL and DIRT
 model.steps = 20;   % the steps for sequential inference
                    % for cts model, the total time is model.dt * steps 
 model.sam_size = 1e4; % the sample size to estimate precondition in filter
+
+file = 'test';
+model.file = file;
 
 
 
@@ -33,12 +36,8 @@ elseif strcmp(model.pre, 'NL')
 end
 
 
-file = 'test';
-model.file = file;
-
-
 %% complete model
-
+mkdir('data')
 addpath([rootref '/' model.name])
 
 rng(1)
@@ -50,6 +49,7 @@ rng('shuffle')
 % model.C = C;
 % model.X = X(:, 1:model.steps+1);
 % model.Y = Y(:, 1:model.steps);
+
 %% ftt
 poly1 = Legendre(40, [-4, 4]);
 poly2 = Lagrange1(50, [-4, 4]);
