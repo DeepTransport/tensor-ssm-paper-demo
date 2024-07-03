@@ -1,0 +1,7 @@
+.fig
+.eps
+.jpg
+.jpeg
+.png
+*.mat
+**/data
