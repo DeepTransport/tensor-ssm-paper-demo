@@ -54,7 +54,7 @@ rng('shuffle')
 plot_sirt(mySol, T)
 
 %%
-NN = 1e4;
+
 [thetas, sams, w] = smooth(mySol, N, T);
 plot_stats(mySol, thetas, sams, w);
 

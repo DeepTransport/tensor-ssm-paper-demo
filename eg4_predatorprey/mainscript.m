@@ -83,13 +83,13 @@ rng('shuffle')
 
 
 %%
-NN = 1e4;
+N_sample = 1e4;
 
-[thetas, sams, w, logpdf_eall] = smooth(mySol_bounded, NN, T);
+[thetas, sams, w] = smooth(mySol_bounded, N_sample, T);
 plot_sirt(mySol_bounded, T)
 stats = plot_stats(mySol_bounded, thetas, sams, w);
 
-[thetas, sams, w, logpdf_eall] = smooth(mySol_pre, NN, T);
+[thetas, sams, w] = smooth(mySol_pre, N_sample, T);
 plot_sirt(mySol_pre, T)
 stats = plot_stats(mySol_pre, thetas, sams, w);
 
