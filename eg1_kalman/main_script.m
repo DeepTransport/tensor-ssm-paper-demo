@@ -49,10 +49,6 @@ mySolsqr = full_sol(myModel, sqr, poly, ...
 mySolsqr = solve(mySolsqr);
 % plot_sirt(mySolsqr, T)
 
-mySolsqr2 = full_sol(myModel, sqr, poly, ...
-                opt, lowopt, N, epd_Lag);
-mySolsqr2 = solve(mySolsqr2);
-% plot_sirt(mySolsqr2, T)
 
 sqr = 0;
 mySolroot = full_sol(myModel, sqr, poly, ...
@@ -85,8 +81,8 @@ plot(1:T, L1sqr, 1:T, L1root)
 title("L1 error")
 legend("Squared Version", "Non-squared Version")
 
-[thetas, sams, w] = smooth(mySolsqr2, N, T);
-plot_stats(mySolsqr2, thetas, sams, w);
+[thetas, sams, w] = smooth(mySolsqr, N, T);
+plot_stats(mySolsqr, thetas, sams, w);
 
 
 rmpath([proot, '/models/', name])
