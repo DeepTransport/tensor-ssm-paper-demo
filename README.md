@@ -8,7 +8,7 @@ In our approach, we use the continuous TT package deep-tensor developed by Cui a
 The project is built on Matlab 2021a, and proves to work on Matlab 2023a. 
 
 # Usage
-The folders [deep-tensor.dev](https://github.com/DeepTransport/tensor-ssm-paper-demo/tree/main/ftt.m-master) and [models](https://github.com/DeepTransport/tensor-ssm-paper-demo/tree/main/ref) are the toolboxes for continuous TT package and model configs. To implement the project, first run the file [deep-tensor.dev/load_dir.m](https://github.com/DeepTransport/tensor-ssm-paper-demo/blob/main/deep-tensor.dev/load_dir.m) to add the paths.
+The folders [deep-tensor.dev](https://github.com/DeepTransport/tensor-ssm-paper-demo/tree/main/deep-tensor.dev) and [models](https://github.com/DeepTransport/tensor-ssm-paper-demo/tree/main/models) are the toolboxes for continuous TT package and model configs. To implement the project, first run the file [deep-tensor.dev/load_dir.m](https://github.com/DeepTransport/tensor-ssm-paper-demo/blob/main/deep-tensor.dev/load_dir.m) to add the paths.
 
 Then, the folders with prefix ``eg'' contain the files for four demonstrating examples in the paper "Tensor-train methods for sequential state and parameter learning in state-space models".: Kalman filter, stochastic volatility model, SIR model and predator-prey model. Simply run the script named ``main_script'' in each folder to check the outputs.
 
