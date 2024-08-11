@@ -10,7 +10,7 @@ The project is built on Matlab 2021a, and proves to work on Matlab 2023a.
 # Usage
 The folders [deep-tensor.dev](https://github.com/DeepTransport/tensor-ssm-paper-demo/tree/main/deep-tensor.dev) and [models](https://github.com/DeepTransport/tensor-ssm-paper-demo/tree/main/models) are the toolboxes for continuous TT package and model configs. To implement the project, first run the file [deep-tensor.dev/load_dir.m](https://github.com/DeepTransport/tensor-ssm-paper-demo/blob/main/deep-tensor.dev/load_dir.m) to add the paths.
 
-Then, the folders with prefix ``eg'' contain the files for four demonstrating examples in the paper "Tensor-train methods for sequential state and parameter learning in state-space models".: Kalman filter, stochastic volatility model, SIR model and predator-prey model. Simply run the script named ``main_script'' in each folder to check the outputs.
+Then, the folders with prefix ''eg'' contain the files for four demonstrating examples in the paper "Tensor-train methods for sequential state and parameter learning in state-space models": Kalman filter, stochastic volatility model, SIR model and predator-prey model. Simply run the script named ''main_script'' in each folder to check the outputs.
 
 The output ``stats`` contains:
 * ``stats.samples``: the simulated samples obtained from a series of tensor trains.
@@ -38,7 +38,7 @@ opt = TTOption('tt_method', 'random', ...
 lowopt = TTOption('tt_method', 'random', ...
     'als_tol', 1E-10, 'local_tol', 1E-4, 'max_rank', rank, 'max_als', 2, 'init_rank', 5, 'kick_rank', 5);
 ```
-We set the default domain for the codes to be $[-1,1]$, whereas the user can switch between the BoundedDomain or the AlgebraicMapping as above. The freedom of the polynomials can be modified in ``ApproxBases'' command. The rank of the tensor train, which is a crucial factor for accuracy and efficiency, can be modified in ``opt'' command.
+We set the default domain for the codes to be [-1,1], whereas the user can switch between the BoundedDomain or the AlgebraicMapping as above. The freedom of the polynomials can be modified in ''ApproxBases'' command. The rank of the tensor train, which is a crucial factor for accuracy and efficiency, can be modified in ''opt'' command.
 
 The config for the built-in models can be changed in the script ``setup`` in each model folder in [models].
 For example, the parameters for the Kalman filter example is stored in [models/kalman/setup](https://github.com/DeepTransport/tensor-ssm-paper-demo/blob/main/models/kalman/setup.m)
